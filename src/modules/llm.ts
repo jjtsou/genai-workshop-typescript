@@ -1,4 +1,7 @@
-import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
+import { ChatOpenAI } from "@langchain/openai";
 
 // TODO: Implement
-export const llm = undefined;
+export const llm = new ChatOpenAI({
+  openAIApiKey: process.env.OPENAI_API_KEY,
+  model:'gpt-4o'
+});
